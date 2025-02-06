@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #001e4d;
+  color: white;
+  text-align: center;
+}
+.app {
+  background: #fff;
+  color: #001e4d;
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+h1 {
+  font-weight: bold;
+}
+#startButton, #spinButton {
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+#startButton:hover, #spinButton:hover {
+  background: #218838;
+}
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+}
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  background: conic-gradient(
+    #f39c12 0% 16.67%,
+    #3498db 16.67% 33.33%,
+    #e74c3c 33.33% 50%,
+    #9b59b6 50% 66.67%,
+    #2ecc71 66.67% 83.33%,
+    #1abc9c 83.33% 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+  transition: transform 3s ease-out;
+}
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #ff0000;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.integrity-box {
+  background: #f39c12;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: inline-block;
+}
+.hidden {
+  display: none;
+}
